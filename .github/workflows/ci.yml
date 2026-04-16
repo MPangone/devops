@@ -16,7 +16,7 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore
-        run: dotnet restore devops.sln
+        run: dotnet restore MinhaApi.csproj
 
       - name: Test with coverage
         run: dotnet test MinhaApi.Tests/MinhaApi.Tests.csproj /p:CollectCoverage=true /p:Threshold=80 /p:ThresholdType=line
